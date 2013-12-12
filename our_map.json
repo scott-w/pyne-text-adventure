@@ -1,22 +1,43 @@
+
 {
-    "_first": {
-        "up": "upstairs",
-        "down": "basement",
-        "description": "You are starting the game"
-    },
-    "upstairs": {
-        "down": "_first",
-        "left": "_end",
-        "description": "You have climbed the stairs"
-    },
-    "basement": {
-        "up": "_first",
-        "description": "You have descended into the basement and it's scary"
-    },
-    "_end": {
-        "description": "You are free!"
-    },
+  
+        "_first": {
+            "description": "You are have suddenly appeared on a picturesque street in a small countryside village. You do not know how you got here but you see a small glow to the north.\n\nType help for a list of valid actions.",
+            "north": "street"
+          },
+        "street": {
+            "description": "You are now outside a house.  There is a light on inside.",
+            "inside": "chimney"
+          },
+          
+        "chimney": {
+            "description": "You find yourself in a dark and sooty chimney.  You do not know why you decided to climb the roof and squeeze into the chimney but here you are.",
+            "up": "street",
+            "down": "livingroom"
+          },
+        "livingroom": {
+            "description": "You feel much better.  It is warm.  There is a roaring fireplace and you see some milk on a table.  You take a quick sip - the least you deserve for climbing that chimney.  There is a door to the west, and some stairs in front of you.",
+            "chimney": "chimney",
+            "stairs": "bedroom",
+            "west": "kitchen"
+          },
+        "kitchen": {
+            "description": "You open the fridge and put some more mince pies in your pocket. The living room is back to the east.",
+            "east": "livingroom"
+          },
+        "bedroom": {
+            "description": "You climb the stairs and enter the first bedroom.  There are some presents by the foot of a bed.",
+            "stealpresents": "_end"
+          },
+        "_end": {
+            "description": "You are a bad, bad man.  But you win - well done."
+          },
+      
     "_null": {
-        "jump": "You jump up and down"
-    }
-}
+        "jump": "You hop up and down.",
+        "eat": "You take a mince pie out of your pocket and sit for a short time enjoying it's cold fruity filling.",
+        "help": "Try typing one of the directions, 'i', 'me', or something else.",
+        "me": "You are wearing a red, silk suit and have a white wooly hat on.",
+        "i": "You are holding a sack, you suppose it may contain potatoes."
+      }
+  }
