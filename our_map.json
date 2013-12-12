@@ -1,0 +1,22 @@
+{
+    "_first": {
+        "up": "upstairs",
+        "down": "basement",
+        "description": "You are starting the game"
+    },
+    "upstairs": {
+        "down": "_first",
+        "left": "_end",
+        "description": "You have climbed the stairs"
+    },
+    "basement": {
+        "up": "_first",
+        "description": "You have descended into the basement and it's scary"
+    },
+    "_end": {
+        "description": "You are free!"
+    },
+    "_null": {
+        "jump": "You jump up and down"
+    }
+}
